@@ -1,0 +1,6 @@
+export(CSdataclean, isotNEW2, CSbj)
+export(el.CS.prob, el.CS.2prob)
+export(el.CS.mean, el.CS.Hz)
+importFrom(quadprog, solve.QP)
+importFrom(monotone, monotone)
+importFrom(stats, lsfit)
