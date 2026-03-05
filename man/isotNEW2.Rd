@@ -7,7 +7,7 @@ by Calling the monotone Function from monotone Package
 \description{
 Using improved PAVA algorithm to calculate the NPMLE of CDF F(t). Input inspection times (x) can
 have ties. We require two extra inputs a and b to make sure the output is a proper CDF:
-F(t(1)-a) =0, and F(t(n)+b) =1 and the rest are increase from 0 increase to 1.
+\eqn{F(t_{(1)}-a) =0}, and \eqn{F(t_{(n)}+b) =1} always, and the rest are increase from 0 to 1.
 }
 \usage{
 isotNEW2(x, y, a, b, LONG=TRUE) 
@@ -27,7 +27,7 @@ This function, \code{isotNEW2}, takes in the current status data in the long for
 
 For more details please refer to monotone package.
 
-May be we should put a=1, b=1 as default. 
+May be we should put a=1, b=1 as default?
 
 Since the NPMLE of F(t) has very few number of jumps
 (for sample size N, the number of positive jumps are about cubic root N), 
@@ -43,7 +43,7 @@ It returns a list in either the long format or short format containing
 \references{
 Busing, F. (2022). \emph{Monotone regression: A simple and fast O(n) PAVA
 implementation.} Journal of Statistical Software,
-Code Snippets 102, 1 (2022), 1--25. \doi{https://doi.org/10.18637/jss.v102.c01}
+Code Snippets 102, 1, 1--25. \doi{https://doi.org/10.18637/jss.v102.c01}
 
 Zhou, M. (2026). \emph{Empirical Likelihood Method in Survival Analysis 2nd Edition} Chapman & Hall/CRC
 }

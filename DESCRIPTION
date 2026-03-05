@@ -1,5 +1,5 @@
 Package: emplikCS
-Version: 0.2
+Version: 0.3
 Title: Empirical Likelihood with Current Status Data for Mean,
         Probability, Hazard
 Authors@R: person("Mai", "Zhou", role = c("aut", "cre"),
@@ -8,11 +8,11 @@ Maintainer: Mai Zhou <maizhou@gmail.com>
 Depends: R (>= 4.0.0), quadprog, monotone
 Imports: stats
 Description: Compute the empirical likelihood ratio, -2LogLikRatio (Wilks) statistics,
-             based on current status data for the hypothesis about the parameters of mean
+             based on current status data for the hypotheses about the parameters of mean
 			 or probability or weighted cumulative hazard.		 
 License: GPL (>= 2)
 NeedsCompilation: no
 Author: Mai Zhou [aut, cre]
-Packaged: 2026-01-26 01:19:34 UTC; maizh
+Packaged: 2026-03-05 01:49:37 UTC; maizh
 Repository: CRAN
-Date/Publication: 2026-01-29 21:40:01 UTC
+Date/Publication: 2026-03-05 03:30:02 UTC

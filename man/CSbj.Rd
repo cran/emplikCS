@@ -13,7 +13,7 @@ which is assumed iid.
 CSbj(x, delta, Itime, maxiter = 99, error = 0.0001) 
 }
 \arguments{
-\item{x}{Design matrix N row p col. }
+\item{x}{Design matrix. N rows p columns. }
 \item{delta}{Either 0 or 1. I[yi <= Itimei]. Length N. yi = beta xi + ei}
 \item{Itime}{The inspection times. Length N.}
 \item{maxiter}{Default to 99. Control the iteration.}
@@ -22,16 +22,16 @@ CSbj(x, delta, Itime, maxiter = 99, error = 0.0001)
 \details{
 This function is an implementation of the Buckley-James estimator for the
 regression parameter beta in the 
-AFT regression model when the observed responses are current status censored. Similar
+AFT regression model when the responses, yi, are current status censored. Similar
 to the Binary Choice model in econometrics where all the inspection times are fixed at zero.
 I wrote an S-plus function for the binary choice model (name bibj).
 It is easily adapted to the current status situation, and this is the function.
-The AFT model we considered here has a intercept term. But we try to estimate the regression
-parameter beta, without intercept term.
-The estimator of intercept can be obtained as the mean of the iid error term
-after we got the estimator of the slope terms.
+The AFT model we considered here has an intercept term. But we try to estimate the regression
+parameter beta, without the intercept term first.
+The estimator of the intercept can be obtained (if needed) as the mean of the iid errors/residuals
+after we got the estimator of the slope parameter beta.
 
-Depends on the functions \code{monotone} from package monotone
+This function depends on the functions \code{monotone} from package monotone
 and \code{lsfit} from the basic stats package.
 
 At this point, we do not have a good estimate for the variance for 
@@ -44,7 +44,7 @@ It returns a list containing
 \item{iterN}{Number of iterations done.}
 \item{distFx}{Locations of the jumps of final estimator of the error distribution.}
 \item{distFy}{Probabilities of the final estimator of the error distribution at jump locations.
-      Mean of this error distribution is the intercept term est. of the regression model.}
+      Mean of this error distribution is the intercept term estimator of the regression model.}
 }
 \references{
 Zhou, M. (2026). \emph{Empirical Likelihood Method in Survival Analysis 2nd Edition} Chapman & Hall/CRC

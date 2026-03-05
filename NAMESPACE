@@ -1,4 +1,4 @@
-export(CSdataclean, isotNEW2, CSbj)
+export(CSdataclean, isotNEW2, S2L, L2S, CSbj)
 export(el.CS.prob, el.CS.2prob)
 export(el.CS.mean, el.CS.Hz)
 importFrom(quadprog, solve.QP)

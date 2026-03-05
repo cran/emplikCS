@@ -16,16 +16,17 @@ CSdataclean(itime, delta)
 }
 \details{
 When calculate NPMLE of the CDF F(t) from current status data, it is obvious that 
-F(t) = 0  before the location (itime) of first delta=1 occur in the delta list, 
-and similarly, F(t) = 1 (one position) after the last delta=0 occur. So in the calculation of NPMLE
-we need only to consider F(.) when time t is from itime[first] to itime[last]. 
+F(t) = 0 before the location (in itime) of first delta=1 occurance in the delta list, 
+and similarly, F(t) = 1 after the last delta=0 occurance. So in the calculation of NPMLE
+we need only to consider estimating F(.) when time t is from itime[first] to itime[last]. 
 
 We take the definition of NPMLE \eqn{ \hat F_n(t) } as right continuous.
 
 Usually, the current status data are stored in either long format or short format.
 The short format is often used when there are many tied inspection times.
-This function, \code{CSdataclean}, takes input the current status data in the long form:
+This function, \code{CSdataclean}, takes input of current status data in the long format:
 \code{itime=(t1, t2, ... tN)} and \code{delta=(0,1,... 1)}. The only values in the delta are 0 or 1.
+If needed you can convert the short format to long format using function \code{L2S}.
 }
 \value{
 It returns a list containing
